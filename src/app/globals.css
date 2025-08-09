@@ -1,26 +1,148 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('/RUTER/fondo.jpg'); /* <-- slash inicial */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  font-family: 'Phongphrai';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-weight: bold;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px #2200ff;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  
+    text-align: center;
+}
+
+form {
+        background-color: #efeded;
+        width: 90vw;
+        max-width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+form button {
+    background-color: #0400ff;
+    color: #f2f2f2;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1900b9;
+}
+
+input, select, textarea {
+    
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #0016ff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+label {
+    color: #000000; /* Color blanco para las etiquetas */
+    cursor: default;
+}
+
+.form-group  {
+    background-color: #ffffff;
+    border: 1px solid #0045ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgb(0 72 255 / 30%);
+    width: 100%;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo-img {
+    width: 200px;
+    max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        background-color: #fefdfd;
+        width: 90vw;
+        max-width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    input, select, textarea {
+        font-size: 1rem;
+    }
+
+    button {
+   
+        font-size: 1rem;
+    }
 }
