@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/RUTER",  // Ruta base para GitHub Pages (ajustalo si es distinto)
+  basePath: "/RUTER",
+  assetPrefix: "/RUTER/",
   images: {
     unoptimized: true,
   },
